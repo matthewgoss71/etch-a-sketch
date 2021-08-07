@@ -12,10 +12,14 @@ body {
     top: 50%;
     height: 480px;
     margin-top: 50px;
+    border: 1px solid black;
 }
 
 .content {
-    height: 28px;
-    width: 28px;
-    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+}
+
+.add-color {
+    background-color: black;
 }
