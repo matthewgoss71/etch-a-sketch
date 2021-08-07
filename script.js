@@ -8,8 +8,7 @@ for (let i = 0; i < 256; i++) {
 
 const gridSquares = document.querySelectorAll('.content');
     Array.from(gridSquares).forEach((div) => {
-    let selectedSquare = div.addEventListener('mouseover', () => {
-    console.log(div.id);
+    div.addEventListener('mouseover', () => {
     addColor(div.id);
   });
 });
@@ -18,3 +17,13 @@ function addColor(selectedId) {
     let changedSquare = document.getElementById(selectedId);
     changedSquare.classList.add('add-color');
 }
+
+const button = document.getElementById('reset');
+console.log(button);
+button.addEventListener('click', function resetGridButton() {
+    let changedSquares = document.querySelectorAll('.add-color');
+    let arrayChangedSquares = Array.from(changedSquares);
+    for (let i = 0; i < arrayChangedSquares.length; i++) {
+        arrayChangedSquares[i].classList.remove('add-color');
+    }
+});
