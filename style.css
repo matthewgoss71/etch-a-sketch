@@ -1,7 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(16, 30px);
     grid-template-rows: repeat(16, 30px);
+    position: absolute;
+    top: 50%;
+    height: 480px;
+    margin-top: 50px;
 }
 
 .content {
