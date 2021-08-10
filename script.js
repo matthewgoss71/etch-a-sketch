@@ -1,7 +1,9 @@
+//initial values of grid
 let x = 256;
 let y = 16;
 gridSizeSet(x, y);
 
+//makes grid, adjustable by user input and listens for 'mouseover'
 function gridSizeSet(x, y) {
     for (let i = 0; i < x; i++) {
         newCellDim = 480/y;
@@ -23,6 +25,7 @@ function gridSizeSet(x, y) {
     });
 }
 
+//reset grid button and functionality
 const buttonReset = document.getElementById('reset');
 buttonReset.addEventListener('click', resetGrid); 
 
@@ -34,6 +37,7 @@ function resetGrid() {
     }
 }
 
+//resize grid button and functionality
 const buttonResize = document.getElementById('resize');
 buttonResize.addEventListener('click', function resizeGridHeight() {
     do {var newDim = parseInt(prompt('Please enter new grid dimension:', ''))
@@ -50,13 +54,7 @@ function setNewGrid() {
     });
 }
 
-const gridSquares = document.querySelectorAll('.content');
-    Array.from(gridSquares).forEach((div) => {
-    div.addEventListener('mouseover', () => {
-    addColor(div.id);
-  });
-});
-
+//black and white mode button and functionality
 const buttonBAW = document.querySelector('#black-and-white');
 buttonBAW.addEventListener('click', () => {
         const gridSquares = document.querySelectorAll('.content');
@@ -72,6 +70,7 @@ function addColor(selectedId) {
     changedSquare.style.backgroundColor = 'black';
 }
 
+//rainbow button and functionality
 const buttonRainbow = document.querySelector('#rainbow');
 buttonRainbow.addEventListener('click', function rainbowColor() {
     Array.from(document.querySelectorAll('.content')).forEach((div) => {
