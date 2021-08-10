@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    background-color:black;
 }
 
 #container {
@@ -10,10 +11,23 @@ body {
     top: 50%;
     height: 480px;
     width: 480px;
-    margin-top: 50px;
-    border: 1px solid black;
+    margin-top: 40px;
+    border: 40px solid red;
+    border-radius: 10px;
+    background-color: white;
  }
 
-.add-color {
-    background-color: black;
+.button {
+    margin-left: 15px;
+    height: 20px;
+    width: 150px;
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+    background-color: lightyellow;
+}
+
+.button:hover {
+    border-color: yellow;
+    background-color: white;
 }

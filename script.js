@@ -67,7 +67,7 @@ buttonBAW.addEventListener('click', () => {
 
 function addColor(selectedId) {
     let changedSquare = document.getElementById(selectedId);
-    changedSquare.style.backgroundColor = 'black';
+    changedSquare.style.backgroundColor = 'rgba(0, 0, 0, 1)';
 }
 
 //rainbow button and functionality
@@ -85,3 +85,25 @@ function addRainbowColor(selectedId) {
     let changedSquare = document.getElementById(selectedId);
     changedSquare.style.backgroundColor = '#' + randomColor;
 }
+
+//tint button and functionality
+/* const buttonTint = document.querySelector('#tint');
+buttonTint.addEventListener('click', function tintColor() {
+    Array.from(document.querySelectorAll('.content')).forEach((div) => {
+        div.addEventListener('mouseover', () => {
+            addTintColor(div.id);
+        });
+    });
+});
+
+function addTintColor(selectedId) {
+    let changedSquare = document.getElementById(selectedId);
+    let alphaOriginal = window.getComputedStyle(changedSquare).getPropertyValue('background-color');
+    console.log(alphaOriginal);
+    let alpha = parseFloat(alphaOriginal.split(',')[3]);
+    console.log(alpha);
+    let alphaUp = alpha + 0.1;
+    console.log(alphaUp);
+    changedSquare.style.backgroundColor = 'rgba(0, 0, 0,' + alphaUp + ')';
+}
+ */
